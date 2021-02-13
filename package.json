@@ -13,6 +13,7 @@
   },
   "homepage": "https://github.com/allanavelar/local-dev-docker#readme",
   "bin": {
-    "local-dev-docker": "./bin/local-dev-docker"
+    "local-dev-docker": "./bin/local-dev-docker",
+    "local-dev-docker-init": "./bin/local-dev-docker-init"
   }
 }
