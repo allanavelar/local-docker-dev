@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-__DIR__="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-__PARENT_DIR__="$( dirname "${__DIR__}")"
+__DIR__="$(dirname "$0")"
+__REAL_DIR__="$(dirname "$(readlink "$0")")"
 
-cd "${__PARENT_DIR__}"
+cd "${__DIR__}/${__REAL_DIR__}"
+cd ..
 
 make
