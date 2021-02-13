@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+__DIR__="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+__PARENT_DIR__="$( dirname "${__DIR__}")"
+
+cd "${__PARENT_DIR__}"
+
+make

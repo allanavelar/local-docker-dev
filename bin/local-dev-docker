@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 
-# __DIR__="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-# __PARENT_DIR__="$( dirname "${__DIR__}")"
-# "${__DIR__}/../allanavelar-node15/run.sh" "${@:2}"
-
 __TARGET="${1}"
 __CMD="${@:2}"
 
 if [[ "${__TARGET}" == "npm" ]]; then
   __TARGET="node"
   __CMD="npm ${__CMD}"
+fi
+
+if [[ "${__TARGET}" == "npmr" ]]; then
+  __TARGET="node"
+  __CMD="npm run ${__CMD}"
 fi
 
 if [[ "${__TARGET}" == "composer" ]]; then

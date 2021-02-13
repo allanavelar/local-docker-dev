@@ -42,22 +42,40 @@
 
 ## Quick start
 
-local-dev-docker is a Docker-based tool to allow developers running app maintenance scripts inside containers.
+`local-dev-docker` is a Docker-based tool to allow developers running app maintenance scripts inside containers.
 
-Supports:
+When you run `local-dev-docker [IMAGE] [COMMAND]` in your current directory, it will mount it as delegated volume, together with some of your `$HOME` files(*) and folders needed to run tasks like `git push`, `npm publish`, `composer install`, etc. which usually require credentials.
+
+(*)*Mounts (read-only): `~/.ssh`, `~/.npmrc`, `~/.composer/auth.json`, `~/.gitconfig`, `~/.gitignore_global`*
+
+## Features
+
+Supported Languages and Tools:
 
 - Node / npm
-- PHP / composer
+- PHP / composer (planned)
 
-Once you include the `./bin` directory in your PATH variable, e.g. in your `~/.zshrc` file:
+## Setup
 
 ```bash
-export PATH="path-to-local-dev-docker/bin:$PATH"
+npm i -g git+https://github.com/allanavelar/local-dev-docker.git
 ```
 
-Then, you can run any container from your current directory like `local-dev-docker npm run build`, which is an alias of `local-dev-docker node npm run build`.
+## Usage
 
-The `local-dev-docker` command will mount your current directory as delegated volume with some relevant dot files (.ssh folder, .gitconfig, .composer/auth.json, etc) that might be needed to run tasks like `git push`, `npm publish`, `composer install`, etc.
+### Node (LTS)
+
+```bash
+
+# Run any command (e.g. "local-dev-docker node ls -la" OR "local-dev-docker node node index.js")
+local-dev-docker node [COMMAND]
+
+# Alias for "local-dev-docker node npm"
+local-dev-docker npm [NPM-COMMAND]
+
+# Alias for "local-dev-docker node npm run"
+local-dev-docker npmr [NPM-SCRIPT]
+```
 
 ## Bugs and feature requests
 
