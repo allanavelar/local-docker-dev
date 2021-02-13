@@ -11,5 +11,8 @@
   "bugs": {
     "url": "https://github.com/allanavelar/local-dev-docker/issues"
   },
-  "homepage": "https://github.com/allanavelar/local-dev-docker#readme"
+  "homepage": "https://github.com/allanavelar/local-dev-docker#readme",
+  "bin": {
+    "local-dev-docker": "./bin/local-dev-docker"
+  }
 }
