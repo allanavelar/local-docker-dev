@@ -1,0 +1,15 @@
+{
+  "name": "@allanavelar/local-dev-docker",
+  "version": "1.0.0",
+  "description": "Package managers dockerized out of the box",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allanavelar/local-dev-docker.git"
+  },
+  "author": "Allan Avelar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/allanavelar/local-dev-docker/issues"
+  },
+  "homepage": "https://github.com/allanavelar/local-dev-docker#readme"
+}
