@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# __DIR__="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+# __PARENT_DIR__="$( dirname "${__DIR__}")"
+# "${__DIR__}/../allanavelar-node15/run.sh" "${@:2}"
+
+__TARGET="${1}"
+__CMD="${@:2}"
+
+if [[ "${__TARGET}" == "npm" ]]; then
+  __TARGET="node"
+  __CMD="npm ${__CMD}"
+fi
+
+if [[ "${__TARGET}" == "composer" ]]; then
+  __TARGET="php"
+  __CMD="composer ${__CMD}"
+fi
+
+docker run --rm -it \
+  -v "$(pwd):/usr/src/code:delegated" \
+  -v "${HOME}/.ssh:/root/.ssh:ro" \
+  -v "${HOME}/.npmrc:/root/.npmrc:ro" \
+  -v "${HOME}/.composer/auth.json:/root/.composer/auth.json:ro" \
+  -v "${HOME}/.gitconfig:/root/.gitconfig:ro" \
+  -v "${HOME}/.gitignore_global:/root/.gitignore_global:ro" \
+  "local-dev-docker-${__TARGET}:latest" "${__CMD}"
