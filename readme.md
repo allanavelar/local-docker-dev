@@ -7,27 +7,27 @@
 
 <p align="center">
   <a href="#">
-    <img src="https://img.shields.io/github/languages/top/allanavelar/local-dev-docker.svg?style=for-the-badge" alt="language-used"/>
+    <img src="https://img.shields.io/github/languages/top/allanavelar/local-docker-dev.svg?style=for-the-badge" alt="language-used"/>
   </a>
 
   <a href="#">
-    <img src="https://img.shields.io/github/contributors/allanavelar/local-dev-docker.svg?style=for-the-badge">
+    <img src="https://img.shields.io/github/contributors/allanavelar/local-docker-dev.svg?style=for-the-badge">
   </a>
 
   <a href="#">
-    <img src="https://img.shields.io/github/forks/allanavelar/local-dev-docker.svg?style=for-the-badge">
+    <img src="https://img.shields.io/github/forks/allanavelar/local-docker-dev.svg?style=for-the-badge">
   </a>
 
   <a href="#">
-    <img src="https://img.shields.io/github/stars/allanavelar/local-dev-docker.svg?style=for-the-badge">
+    <img src="https://img.shields.io/github/stars/allanavelar/local-docker-dev.svg?style=for-the-badge">
   </a>
 
   <a href="#">
-    <img src="https://img.shields.io/github/issues/allanavelar/local-dev-docker.svg?style=for-the-badge">
+    <img src="https://img.shields.io/github/issues/allanavelar/local-docker-dev.svg?style=for-the-badge">
   </a>
 
   <a href="#">
-    <img src="https://img.shields.io/github/license/allanavelar/local-dev-docker.svg?style=for-the-badge">
+    <img src="https://img.shields.io/github/license/allanavelar/local-docker-dev.svg?style=for-the-badge">
   </a>
 </p>
 
@@ -42,17 +42,17 @@
 
 ## Quick start
 
-`local-dev-docker` is a Docker-based tool to allow developers running app maintenance scripts inside containers.
+`local-docker-dev` is a Docker-based tool to allow developers running app maintenance scripts inside containers.
 
-When you run `local-dev-docker [IMAGE] [COMMAND]` in your current directory, it will mount it as delegated volume, together with some of your `$HOME` files(*) and folders needed to run tasks like `git push`, `npm publish`, `composer install`, etc. which usually require credentials.
+When you run `local-docker-dev [IMAGE] [COMMAND]` in your current directory, it will mount it as delegated volume, together with some of your `$HOME` files(*) and folders needed to run tasks like `git push`, `npm publish`, `composer install`, etc. which usually require credentials.
 
 (*)*Mounts (read-only): `~/.ssh`, `~/.npmrc`, `~/.composer/auth.json`, `~/.gitconfig`, `~/.gitignore_global`*
 
 ## Setup
 
 ```bash
-npm i -g git+https://github.com/allanavelar/local-dev-docker.git && \
-local-dev-docker-init
+npm i -g git+https://github.com/allanavelar/local-docker-dev.git && \
+local-docker-dev-init
 ```
 
 ## Supported Languages
@@ -77,23 +77,23 @@ PHP & composer:
 
 ```bash
 # Usage template:
-local-dev-docker [LANG]:[VERSION] [COMMAND] [...PARAMETERS]
+local-docker-dev [LANG]:[VERSION] [COMMAND] [...PARAMETERS]
 ```
 
 ```bash
 # Examples:
-local-dev-docker node:16 node --version
-local-dev-docker node npm install
-local-dev-docker npm install
+local-docker-dev node:16 node --version
+local-docker-dev node npm install
+local-docker-dev npm install
 
-local-dev-docker php:8 php --ini
-local-dev-docker php composer install
-local-dev-docker composer install
+local-docker-dev php:8 php --ini
+local-docker-dev php composer install
+local-docker-dev composer install
 ```
 
 ## Bugs and feature requests
 
-Have a bug or a feature request? Please first read the [issue guidelines](./contributing.md) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/allanavelar/local-dev-docker/issues/new).
+Have a bug or a feature request? Please first read the [issue guidelines](./contributing.md) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/allanavelar/local-docker-dev/issues/new).
 
 ## Contributing
 

@@ -1,19 +1,19 @@
 {
-  "name": "@allanavelar/local-dev-docker",
+  "name": "@allanavelar/local-docker-dev",
   "version": "0.3.0",
   "description": "Package managers dockerized out of the box",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/allanavelar/local-dev-docker.git"
+    "url": "git+https://github.com/allanavelar/local-docker-dev.git"
   },
   "author": "Allan Avelar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/allanavelar/local-dev-docker/issues"
+    "url": "https://github.com/allanavelar/local-docker-dev/issues"
   },
-  "homepage": "https://github.com/allanavelar/local-dev-docker#readme",
+  "homepage": "https://github.com/allanavelar/local-docker-dev#readme",
   "bin": {
-    "local-dev-docker": "./bin/local-dev-docker",
-    "local-dev-docker-init": "./bin/local-dev-docker-init"
+    "local-docker-dev": "./bin/local-docker-dev",
+    "local-docker-dev-init": "./bin/local-docker-dev-init"
   }
 }

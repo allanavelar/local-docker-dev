@@ -25,4 +25,4 @@ docker run --rm -it \
   -v "${HOME}/.composer/auth.json:/root/.composer/auth.json:ro" \
   -v "${HOME}/.gitconfig:/root/.gitconfig:ro" \
   -v "${HOME}/.gitignore_global:/root/.gitignore_global:ro" \
-  "local-dev-docker-${__TARGET}" "${__CMD}"
+  "local-docker-dev-${__TARGET}" "${__CMD}"
