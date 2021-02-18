@@ -73,6 +73,13 @@ PHP & composer:
 - `php:latest`
 - `composer` (runs on `php:latest`)
 
+Go (planned):
+
+- `go`
+- `go:1.15`
+- `go:1.16`
+- `go:latest`
+
 ## Usage
 
 ```bash
