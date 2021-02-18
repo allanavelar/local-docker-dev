@@ -1,6 +1,6 @@
 {
   "name": "@allanavelar/local-docker-dev",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Package managers dockerized out of the box",
   "repository": {
     "type": "git",
