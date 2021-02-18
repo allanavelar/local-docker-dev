@@ -48,33 +48,47 @@ When you run `local-dev-docker [IMAGE] [COMMAND]` in your current directory, it 
 
 (*)*Mounts (read-only): `~/.ssh`, `~/.npmrc`, `~/.composer/auth.json`, `~/.gitconfig`, `~/.gitignore_global`*
 
-## Features
-
-Supported Languages and Tools:
-
-- Node / npm
-- PHP / composer (planned)
-
 ## Setup
 
 ```bash
-npm i -g git+https://github.com/allanavelar/local-dev-docker.git
+npm i -g git+https://github.com/allanavelar/local-dev-docker.git && \
+local-dev-docker-init
 ```
+
+## Supported Languages
+
+Node & npm:
+
+- `node`
+- `node:15`
+- `node:16`
+- `node:latest`
+- `npm` (runs on `node:latest`)
+
+PHP & composer:
+
+- `php`
+- `php:7`
+- `php:8`
+- `php:latest`
+- `composer` (runs on `php:latest`)
 
 ## Usage
 
-### Node (LTS)
+```bash
+# Usage template:
+local-dev-docker [LANG]:[VERSION] [COMMAND] [...PARAMETERS]
+```
 
 ```bash
+# Examples:
+local-dev-docker node:16 node --version
+local-dev-docker node npm install
+local-dev-docker npm install
 
-# Run any command (e.g. "local-dev-docker node ls -la" OR "local-dev-docker node node index.js")
-local-dev-docker node [COMMAND]
-
-# Alias for "local-dev-docker node npm"
-local-dev-docker npm [NPM-COMMAND]
-
-# Alias for "local-dev-docker node npm run"
-local-dev-docker npmr [NPM-SCRIPT]
+local-dev-docker php:8 php --ini
+local-dev-docker php composer install
+local-dev-docker composer install
 ```
 
 ## Bugs and feature requests
