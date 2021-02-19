@@ -59,6 +59,8 @@ npm i -g @allanavelar/local-docker-dev && \
 local-docker-dev-init
 ```
 
+The Docker images are built by you, so you can customize this project to your needs and run `local-docker-dev-init` every time you need.
+
 ## Supported Languages
 
 Node & npm:
