@@ -1,7 +1,6 @@
 ARG BUILD_VERSION=7.4-fpm
 FROM php:${BUILD_VERSION} as base
 
-ENV COMPOSER_VERSION=2
 ENV APP_ENV=dev
 ENV APP_DEBUG=1
 ENV PHP_MEMORY_LIMIT=${PHP_MEMORY_LIMIT:-"256M"}
@@ -21,7 +20,7 @@ RUN docker-php-ext-install pdo_mysql pdo_sqlite zip \
     && docker-php-ext-enable apcu
 
 WORKDIR /usr/src/code
-COPY --from=composer:${COMPOSER_VERSION} /usr/bin/composer /usr/local/bin/composer
+COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer
 
 ENTRYPOINT ["/bin/sh", "-c"]
 CMD ["php", "-v"]

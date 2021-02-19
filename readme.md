@@ -67,7 +67,7 @@ Node & npm:
 
 - `node`
 - `node:15`
-- `node:16`, `node:latest`
+- `node:16`, `node:latest`, `node`
 - `npm` (runs on `node:latest`)
 
 PHP & composer:
@@ -75,7 +75,7 @@ PHP & composer:
 - `php`
 - `php:7`
 - `php:7-xdebug`
-- `php:8`, `php:latest`
+- `php:8`, `php:latest`, `php`
 - `php:8-xdebug`
 - `composer` (runs on `php:latest`)
 
