@@ -42,13 +42,17 @@
 
 ## Quick start
 
-`local-docker-dev` is a Docker-based tool to allow developers running app maintenance scripts inside containers.
+`local-docker-dev` is a Docker-based tool to allow developers running app maintenance scripts inside containers, without writing a single line of Dockerfile. This is useful specially to run command-line tools, you won't need to have your own docker files to do that.
 
 When you run `local-docker-dev [IMAGE] [COMMAND]` in your current directory, it will mount it as delegated volume, together with some of your `$HOME` files(*) and folders needed to run tasks like `git push`, `npm publish`, `composer install`, etc. which usually require credentials.
 
 (*) *From your $HOME, it only mounts the following (read-only): `~/.npmrc`, `~/.composer/auth.json`, `~/.gitconfig`, `~/.gitignore_global`*
 
 ## Setup
+
+You can clone this repository and run `bin/local-docker-dev-init`, then you will have to manually config the `bin` directory in your `$PATH` variable to have `local-docker-dev` available everywhere.
+
+Alternatively, if you have node installed in your OS, you can install it globally with `npm`.
 
 ```bash
 npm i -g @allanavelar/local-docker-dev && \
