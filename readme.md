@@ -46,7 +46,7 @@
 
 When you run `local-docker-dev [IMAGE] [COMMAND]` in your current directory, it will mount it as delegated volume, together with some of your `$HOME` files(*) and folders needed to run tasks like `git push`, `npm publish`, `composer install`, etc. which usually require credentials.
 
-(*) *From your $HOME, it only mounts the following (read-only): `~/.ssh`, `~/.npmrc`, `~/.composer/auth.json`, `~/.gitconfig`, `~/.gitignore_global`*
+(*) *From your $HOME, it only mounts the following (read-only): `~/.npmrc`, `~/.composer/auth.json`, `~/.gitconfig`, `~/.gitignore_global`*
 
 ## Setup
 
