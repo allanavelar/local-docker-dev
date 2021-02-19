@@ -46,12 +46,12 @@
 
 When you run `local-docker-dev [IMAGE] [COMMAND]` in your current directory, it will mount it as delegated volume, together with some of your `$HOME` files(*) and folders needed to run tasks like `git push`, `npm publish`, `composer install`, etc. which usually require credentials.
 
-(*)*From your $HOME, it only mounts the following (read-only): `~/.ssh`, `~/.npmrc`, `~/.composer/auth.json`, `~/.gitconfig`, `~/.gitignore_global`*
+(*) *From your $HOME, it only mounts the following (read-only): `~/.ssh`, `~/.npmrc`, `~/.composer/auth.json`, `~/.gitconfig`, `~/.gitignore_global`*
 
 ## Setup
 
 ```bash
-npm i -g git+https://github.com/allanavelar/local-docker-dev.git && \
+npm i -g @allanavelar/local-docker-dev && \
 local-docker-dev-init
 ```
 
@@ -61,16 +61,16 @@ Node & npm:
 
 - `node`
 - `node:15`
-- `node:16`
-- `node:latest`
+- `node:16`, `node:latest`
 - `npm` (runs on `node:latest`)
 
 PHP & composer:
 
 - `php`
 - `php:7`
-- `php:8`
-- `php:latest`
+- `php:7-xdebug`
+- `php:8`, `php:latest`
+- `php:8-xdebug`
 - `composer` (runs on `php:latest`)
 
 Go (planned):
@@ -96,6 +96,9 @@ local-docker-dev npm install
 local-docker-dev php:8 php --ini
 local-docker-dev php composer install
 local-docker-dev composer install
+
+# Running phpunit with code coverage:
+local-docker-dev php:7-xdebug XDEBUG_MODE=coverage vendor/bin/phpunit
 ```
 
 ## Bugs and feature requests

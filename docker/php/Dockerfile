@@ -36,6 +36,7 @@ RUN pecl install -o -f xdebug-${PHP_XDEBUG_VERSION} && \
 
 RUN echo "[xdebug]" > ${PHP_XDEBUG_CONFIG_FILE} && \
     echo "zend_extension=xdebug.so" >> ${PHP_XDEBUG_CONFIG_FILE} && \
+    #echo "xdebug.mode=coverage" >> ${PHP_XDEBUG_CONFIG_FILE} && \
     echo "xdebug.profiler_enable=1" >> ${PHP_XDEBUG_CONFIG_FILE} && \
     echo "xdebug.remote_enable=1" >> ${PHP_XDEBUG_CONFIG_FILE} && \
     echo "xdebug.remote_handler=dbgp" >> ${PHP_XDEBUG_CONFIG_FILE} && \
