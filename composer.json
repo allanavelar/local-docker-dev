@@ -1,0 +1,22 @@
+{
+  "name": "allanavelar/local-docker-dev",
+  "description": "Local development dockerization of programming languages and their package managers",
+  "keywords": [
+    "dev",
+    "local-dev",
+    "docker",
+    "php",
+    "node",
+    "npm",
+    "composer",
+    "golang",
+    "go"
+  ],
+  "type": "project",
+  "license": "MIT",
+  "require": {},
+  "bin": [
+    "./bin/local-docker-dev",
+    "./bin/local-docker-dev-init"
+  ]
+}

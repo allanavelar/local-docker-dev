@@ -1,7 +1,18 @@
 {
   "name": "@allanavelar/local-docker-dev",
   "version": "0.4.2",
-  "description": "Package managers dockerized out of the box",
+  "description": "Local development dockerization of programming languages and their package managers",
+  "keywords": [
+    "dev",
+    "local-dev",
+    "docker",
+    "php",
+    "node",
+    "npm",
+    "composer",
+    "golang",
+    "go"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/allanavelar/local-docker-dev.git"
