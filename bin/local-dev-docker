@@ -19,8 +19,9 @@ if [[ "${__TARGET}" == "composer" ]]; then
 fi
 
 docker run --rm -it \
+  -e "SSH_AUTH_SOCK=/ssh-agent" \
   -v "$(pwd):/usr/src/code:delegated" \
-  -v "${HOME}/.ssh:/root/.ssh:ro" \
+  -v "${SSH_AUTH_SOCK}:/ssh-agent:ro" \
   -v "${HOME}/.npmrc:/root/.npmrc:ro" \
   -v "${HOME}/.composer/auth.json:/root/.composer/auth.json:ro" \
   -v "${HOME}/.gitconfig:/root/.gitconfig:ro" \
