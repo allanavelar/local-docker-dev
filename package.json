@@ -1,6 +1,6 @@
 {
   "name": "@allanavelar/local-docker-dev",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Local development dockerization of programming languages and their package managers",
   "keywords": [
     "dev",
